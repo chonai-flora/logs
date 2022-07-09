@@ -1,0 +1,11 @@
+@media screen and (min-width: 540px) {
+  .component {
+      width: 480px;
+  }
+}
+
+.component {
+  margin: 0 auto;
+  padding-top: 0.5em;
+  text-align: left;
+}
