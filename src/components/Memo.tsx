@@ -14,7 +14,7 @@ const Memo = () => {
         <>
             <Helmet>
                 <title>メモ</title>
-                <meta name="description" content="忘備録とかライブレポとか。" />
+                <meta name="description" content="忘備録とかライブレポとか" />
             </Helmet>
 
             <p style={{ fontSize: '1.5rem' }}>メモ</p>
@@ -27,8 +27,7 @@ const Memo = () => {
                     <>
                         <br />
                         <Link to={`/memo/${id}`}>{sticky.title}</Link>
-                        <p style={{ fontSize: '0.8rem' }}>
-                            &emsp;作成日 : {date}</p>
+                        <p style={{ fontSize: '0.8rem' }}>作成日 : {date}</p>
                     </>);
             }
             }</For>

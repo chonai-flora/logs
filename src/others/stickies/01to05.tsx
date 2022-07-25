@@ -166,10 +166,10 @@ $ npm -v
 $ npx create-react-app react-sample
 $ cd react-sample/
 ~~~
-普通に\`create-react-app\`します。今回は\`react-sample\`というプロジェクト名で進めていきます。任意で変更してください。
+普通に \`create-react-app\` します。今回は \`react-sample\` というプロジェクト名で進めていきます。任意で変更してください。
 その後作成したフォルダに移動します。
 
-TypeScriptを使用する場合は\`--template typescript\`を加えて実行します。
+TypeScriptを使用する場合は \`--template typescript\` を加えて実行します。
 ~~~console
 $ npx create-react-app react-sample --template typescript
 ~~~
@@ -178,12 +178,12 @@ $ npx create-react-app react-sample --template typescript
 ~~~console
 $ npm start
 ~~~
-ローカルホストにアクセスし、以下の画面が表示されれば起動完了です。\`Ctrl + C\`で終了します。
+ローカルホストにアクセスし、以下の画面が表示されれば起動完了です。 \`Ctrl + C\`で終了します。
 ![01.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1889756/c7891a18-d77d-1c5c-e0c8-822f50aa43dd.png)
 
 # タイトルを変更
 任意で行ってください。そのままでいい方は飛ばして大丈夫です。
-\`public/index.html\`を編集します。
+\`public/index.html\` を編集します。
 ~~~html
 <!DOCTYPE html>
 <html lang="en">
@@ -234,7 +234,7 @@ $ npm start
 ~~~
 
 # package.jsonを修正
-\`package.json\`の\`"scripts"\`を修正し、新たに\`"homepage"\`を追加します。
+\`package.json\` の \`"scripts"\` を修正し、新たに \`"homepage"\` を追加します。
 ~~~json
 {
   "scripts": {
@@ -246,17 +246,17 @@ $ npm start
   "homepage": "https://{username}.github.io/react-sample"
 }
 ~~~
-\`"scripts"\`内の\`"build"\`コマンドを修正しました。Reactで~~~npm run build~~~を実行すると~~~build/~~~というフォルダにプロジェクトがビルドされるのですが、今回は~~~docs/~~~にファイルをまとめてデプロイしたいのでこのように修正しました。そのまま~~~mv~~~するとファイルが混同する可能性があるため一度\`rm\`しています。
-\`"homepage"\`内の\`{username}\`には自分のGitHubアカウントのユーザーネームを入力してください。
+\`"scripts"\` 内の \`"build"\` コマンドを修正しました。Reactで \`npm run build\` を実行すると \`build/\` というフォルダにプロジェクトがビルドされるのですが、今回は \`docs/\` にファイルをまとめてデプロイしたいのでこのように修正しました。
+そのまま \`mv\` するとファイルが混同する可能性があるため一度 \`rm\` しています。\`"homepage"\` 内の \`{username}\` には自分のGitHubアカウントのユーザーネームを入力してください。
 
 # ビルド
 ~~~console
 $ npm run build
 ~~~
-\`docs/\`フォルダが作られ、無事ビルドできたと思います。
+\`docs/\` フォルダが作られ、無事ビルドできたと思います。
 
 # GitHubリポジトリ作成
-GitHubのリポジトリ(今回は\`react-sample\`)を作成します。無料で公開する場合はPublicに設定します。
+GitHubのリポジトリ(今回は \`react-sample\` )を作成します。無料で公開する場合はPublicに設定します。
 
 その後GitHub上にローカルのプロジェクトをpushします。
 ~~~console
@@ -269,7 +269,7 @@ $ git push -u origin main
 ~~~
 
 # GitHub Pagesの設定
-リポジトリの\`Settings\`から\`Pages\`を選び、branchを\`main\`、folderを\`/docs\`にしてSaveをクリックします。
+リポジトリの \`Settings\` から \`Pages\` を選び、branchを \`main\` 、folderを \`/docs\` にしてSaveをクリックします。
 ![02.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1889756/cc854f97-a078-8e73-edb4-7f08686e6b32.png)
 
 https://{username}.github.io/react-sample/ にアクセスし、ローカルの内容が公開できていたら成功です！
@@ -289,7 +289,7 @@ https://{username}.github.io/react-sample/ にアクセスし、ローカルの�
 + もっさがステージに上がった時マジで心臓止まりかけた。映像でみたもっさの何倍も可愛くて感情爆発した……………。藤田さんと並ぶと頭1個分くらい小柄で、トーク下手くそで、でも曲に入るとギターかかえてガシガシ弾いて、めちゃくちゃ歌上手くて、、。溜まってた疲れとか色々吹き飛んだ！
 + おじって歳でもないしちょい失礼かもしれないけど朝日さんリアルで見ると何倍もイケおじ感あってイカしてた。MCも色んな話聞けて楽しかったなぁ。沢山会場沸かしてくれてありがとうございました！！
 + 藤田さんかっこよすぎたなぁ。ほんとに。特にいなせなガールはワイルドなベースに力強いボーカルでマジかっこよかった。途中メンバー同士でイチャついてたの推せる。
-+ ドラムスカズマタケイ！！MCは少なかったけどハイレベルなドラム沢山聴けて幸せでした。あとタケイ氏シンプルにイケメンすぎた。ドラムの名前忘れた。
++ ドラムスカズマタケイ！！MCは少なかったけどハイレベルなドラム沢山聴けて幸せでした。あとタケイ氏シンプルにイケメンすぎた。ドラムの名前忘れた。空振り三振最高でした。
 + むーさんもかっこよかった！！！オシャレ大作戦のキーずっと聴きたかったから生で聴けてよかった…。あとむーさんが着てたシャツオシャレでめちゃめちゃ似合ってたから買えばよかったなーと。
 + 聴きたい曲沢山聴けて幸せでした。興奮しすぎてセトリの記憶曖昧だけどすげー楽しかった。だけじゃないBABYの「ちょっとは元気を出しな」でたくさん元気出た。CHAKAPOCO楽しかった。他にも沢山あったので徐々にセトリ思い出しますね…。
 + ラストのいなせとだれかとぼくら、アンコールのティーンエイジ・ネクラポップ、これでラストかーっていう寂しさを上回るくらい楽しかった。特にネクラポップには励まされたし沁みた。
