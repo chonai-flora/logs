@@ -213,8 +213,8 @@ const comics = () => {
             ),
         },
         {
-            name: "チェーンソーマン",
-            howRead: "ちぇーんそーまん",
+            name: "チェンソーマン",
+            howRead: "ちぇんそーまん",
             describe: (
                 <>
                 </>
