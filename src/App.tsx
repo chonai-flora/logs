@@ -1,10 +1,12 @@
 import './App.css';
 import { Helmet } from "react-helmet";
 import { Container, Row, Col } from "react-bootstrap";
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import Bookshelf from './components/Bookshelf';
-import Memo from './components/Memo';
+import Bookshelf from "./components/Bookshelf";
+import Memo from "./components/Memo";
+import Article from "./components/Article";
+import { stickies } from "./components/Memo";
 
 const urls = [
   "https://icy-bush-05a9b0900.1.azurestaticapps.net/",
@@ -35,6 +37,14 @@ const Home = () => {
   );
 }
 
+const NotFound = () => {
+  return (
+    <>
+      <h1>404 - Not found</h1>
+    </>
+  );
+}
+
 const App = () => {
   return (
     <>
@@ -58,6 +68,11 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
             <Route path="/memo" element={<Memo />} />
+            {stickies.map((_, index) => {
+              const id = String(index + 1).padStart(2, '0');
+              return (<Route path={`/memo/${id}`} element={<Article index={index} />} />);
+            })}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </div>

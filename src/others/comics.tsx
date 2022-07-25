@@ -1,8 +1,4 @@
-export type Comic = {
-    name: string;
-    howRead: string;
-    describe: JSX.Element;
-}
+import { Comic } from "../types";
 
 const getInitial = (comic: Comic) => {
     const initial = comic.howRead[0];
