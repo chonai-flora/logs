@@ -1,4 +1,5 @@
 export type Sticky = {
+    isPublic: boolean;
     category: string;
     createdDate: Date;
     title: string;

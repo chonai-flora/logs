@@ -2,6 +2,7 @@ import { Sticky } from "../../types";
 
 const stickies01to05: Sticky[] = [
     {
+        isPublic: true,
         category: '忘備録',
         createdDate: new Date(2022, 4, 20),
         title: "C++でUnicodeコードポイントから文字を生成",
@@ -146,6 +147,7 @@ int main() {
     `
     },
     {
+        isPublic: true,
         category: 'ゼミ資料',
         createdDate: new Date(2022, 4, 20),
         title: "React AppをGitHub Pagesにデプロイする",
@@ -278,6 +280,7 @@ https://{username}.github.io/react-sample/ にアクセスし、ローカルの�
     `
     },
     {
+        isPublic: true,
         category: 'ライブレポ',
         createdDate: new Date(2022, 7, 25),
         title: "ゴーゴートーキーズ！2022夏 感想殴り書き",

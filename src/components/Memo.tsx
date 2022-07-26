@@ -7,7 +7,9 @@ import stickies01to05 from "../others/stickies/01to05";
 
 export const stickies: Sticky[] = [
     ...stickies01to05,
-].sort((a, b) => a.createdDate.getDate() - b.createdDate.getDate());
+]
+    .filter((sticky) => sticky.isPublic)
+    .sort((a, b) => a.createdDate.getDate() - b.createdDate.getDate());
 
 const Memo = () => {
     return (
@@ -22,12 +24,15 @@ const Memo = () => {
 
             <For of={stickies}>{(sticky, index) => {
                 const id = String(index.index + 1).padStart(2, '0')
-                const date = sticky.createdDate.toLocaleDateString();
+                const date = sticky.createdDate;
                 return (
                     <>
                         <br />
                         <Link to={`/memo/${id}`}>{sticky.title}</Link>
-                        <p style={{ fontSize: '0.8rem' }}>作成日 : {date}</p>
+                        <p style={{ fontSize: '0.8rem' }}>
+                            {date.getFullYear()}年{date.getMonth()}月{date.getDate()}日
+                            - {sticky.category}
+                        </p>
                     </>);
             }
             }</For>

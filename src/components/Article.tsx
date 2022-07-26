@@ -10,6 +10,8 @@ interface ArticleProps {
 
 const Article = (props: ArticleProps) => {
     const sticky = stickies[props.index];
+    const date = sticky.createdDate;
+
     return (
         <>
             <Helmet>
@@ -18,7 +20,7 @@ const Article = (props: ArticleProps) => {
             </Helmet>
 
             <h2>{sticky.title}</h2>
-            <h5>作成日 : {sticky.createdDate.toLocaleDateString()}</h5>
+            <h5>{date.getFullYear()}年{date.getMonth()}月{date.getDate()}日</h5>
             <ReactMarkdown
                 children={sticky.body}
                 components={{
