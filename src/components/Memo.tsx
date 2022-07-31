@@ -28,7 +28,7 @@ const Memo = () => {
                 return (
                     <>
                         <br />
-                        <Link to={`/memo/${id}`}>{sticky.title}</Link>
+                        <Link to={`/memo/${id}`} className="link">{sticky.title}</Link>
                         <p style={{ fontSize: '0.8rem' }}>
                             {date.getFullYear()}年{date.getMonth()}月{date.getDate()}日
                             - {sticky.category}
